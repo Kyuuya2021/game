@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="row">
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+            <div class="cell" onclick="playerMove(this)"></div>
+        </div>
+        <button id="resetButton" onclick="resetGame()">Reset Game
+      </button>
+      <button onclick="toggleMusic()">Toggle Music</button>
+    </div>
+  <!-- Add this within the <body> tag, right after the <div class="game-container"> -->
+<div id="gameOverScreen" class="overlay hidden">
+    <div id="winnerMessage"></div>
+    <button onclick="resetGame()">New Game</button>
+</div>
+
+    <script src="script.js"></script>
+  
+  <audio id="bgMusic" loop>
+    <source src="download_c6ef81fe01.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+
+</body>
+</html>
